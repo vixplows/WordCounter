@@ -19,6 +19,6 @@ public class CountResult extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         String count = extras.getString("count");
-        countText.setText(count);
+        countText.setText("There were " + count + " words in your sentence");
     }
 }
