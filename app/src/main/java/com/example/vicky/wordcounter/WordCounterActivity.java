@@ -1,5 +1,6 @@
 package com.example.vicky.wordcounter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,7 +13,6 @@ import android.widget.TextView;
 public class WordCounterActivity extends AppCompatActivity {
 
     EditText sentenceEditText;
-    TextView countText;
     Button wordcountButton;
 
     @Override
@@ -22,7 +22,6 @@ public class WordCounterActivity extends AppCompatActivity {
 
         sentenceEditText = (EditText) findViewById(R.id.sentence_text);
         wordcountButton = (Button) findViewById(R.id.count_button);
-        countText = (TextView) findViewById(R.id.count_text);
     }
 
     public void onCountButtonClicked(View button) {
@@ -31,7 +30,10 @@ public class WordCounterActivity extends AppCompatActivity {
         Log.d(getClass().toString(), "The sentence provided was '" + sentence + "'");
         WordCount wordCount = new WordCount(sentence);
         int count = wordCount.countWords();
-        countText.setText(Integer.toString(count));
+
+        Intent intent = new Intent(this, CountResult.class);
+        intent.putExtra("count", Integer.toString(count));
+        startActivity(intent);
     }
 
 }

@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CountResult"
+            android:label="@string/count_name"
+            android:parentActivityName=".WordCounterActivity">
+        </activity>
     </application>
 
 </manifest>
