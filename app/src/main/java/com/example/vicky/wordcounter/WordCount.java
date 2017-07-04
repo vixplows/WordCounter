@@ -19,8 +19,6 @@ public class WordCount {
     public int countWords() {
         String sentence = this.sentence;
         String trim = sentence.trim();
-        if (trim == null)
-            return 0;
         return trim.split("\\s+").length;
     }
 }
