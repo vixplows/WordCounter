@@ -16,10 +16,11 @@ public class WordCount {
         return this.sentence;
     }
 
-    public int countWords(String sentence) {
-        if (sentence == null)
+    public int countWords() {
+        String sentence = this.sentence;
+        String trim = sentence.trim();
+        if (trim == null)
             return 0;
-        return sentence.trim().split("").length;
+        return trim.split("\\s+").length;
     }
-
 }

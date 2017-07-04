@@ -22,6 +22,11 @@ public class WordCountTest {
         assertEquals("Well isn't this fun, fun, fun", wordCount.getSentence());
     }
 
+    @Test
+    public void testCountWordsInSentence() {
+        assertEquals(6, wordCount.countWords());
+    }
+
 }
 
 
