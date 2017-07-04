@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Word Counter</string>
     <string name="alt_app_name">Vixes Word Counter</string>
+    <string name="sentence">Add sentence here</string>
 </resources>
