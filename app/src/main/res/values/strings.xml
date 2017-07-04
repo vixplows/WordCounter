@@ -2,4 +2,5 @@
     <string name="app_name">Word Counter</string>
     <string name="alt_app_name">Vixes Word Counter</string>
     <string name="sentence">Add sentence here</string>
+    <string name="count">Word Count</string>
 </resources>
